@@ -16,20 +16,18 @@ body {
   bottom: 0px;
   width: 100%;
   left: 0px;
-  &__start {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__clock {
-    position: absolute;
-    bottom: 0px;
-    right: 15px;
-    font-size: 12px;
-    color: aliceblue;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    text-align: right;
-  }
+}
+.taskbar__start:hover {
+  cursor: pointer;
+}
+.taskbar__clock {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+  font-size: 12px;
+  color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
 }
 
 .icons {
@@ -41,17 +39,16 @@ body {
   gap: 15px;
   align-items: flex-start;
   align-content: flex-start;
-  &__figure {
-    display: flex;
-    flex-direction: column;
-
-    &__icons {
-      align-items: center;
-      margin: 5px;
-      margin-left: 20px;
-      width: 50px;
-    }
-  }
+}
+.icons__figure {
+  display: flex;
+  flex-direction: column;
+}
+.icons__figure__icons {
+  align-items: center;
+  margin: 5px;
+  margin-left: 20px;
+  width: 50px;
 }
 
 .clickStart {
@@ -64,35 +61,30 @@ body {
   padding: 8px 0px 7px 8px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
-  &__head {
-    display: flex;
-    gap: 100px;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: #eee;
-  }
-
-  &__starticon {
-    align-items: center;
-    justify-content: flex-start;
-
-    &__menu {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 100px;
-      justify-content: flex-start;
-    }
-  }
+}
+.clickStart__head {
+  display: flex;
+  gap: 100px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #eee;
+}
+.clickStart__starticon {
+  align-items: center;
+  justify-content: flex-start;
+}
+.clickStart__starticon__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  justify-content: flex-start;
 }
 
 .modal {
-  //display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
-
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -100,18 +92,17 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-
-  &__content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    &__button {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
+}
+.modal__content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal__content__button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Modal Content */
