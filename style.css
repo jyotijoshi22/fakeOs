@@ -20,14 +20,16 @@ body {
 .taskbar__start:hover {
   cursor: pointer;
 }
-.taskbar__clock {
-  position: absolute;
-  bottom: 0px;
-  right: 15px;
+.taskbar__time {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-content: flex-end;
+  bottom: 5px;
+  left: 500px;
   font-size: 12px;
-  color: aliceblue;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: right;
+  color: black;
+  font-weight: bold;
 }
 
 .icons {
@@ -54,7 +56,7 @@ body {
 .clickStart {
   font-family: verdana;
   position: absolute;
-  bottom: 0px;
+  bottom: 25px;
   left: -5px;
   width: 300px;
   background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
@@ -86,7 +88,7 @@ body {
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
-  top: 0;
+  bottom: 10px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -104,5 +106,7 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-
-/* Modal Content */
+.modal__content__folder {
+  display: flex;
+  justify-content: space-around;
+}

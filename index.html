@@ -30,7 +30,7 @@
 
       <div class="icons__figure" id="notepad">
         <img class="icons__figure__icon" src="./icons/notepad.png" alt="File" />
-        <label class="icons__figure__label" for="file">Notepad</label>
+        <label class="icons__figure__label" for="notepad">Notepad</label>
       </div>
 
       <div class="icons__figure" id="folder">
@@ -43,8 +43,8 @@
       </div>
     </div>
 
-    <!--modals for icons in windows main page  -->
-
+    <!--Modals for icons in windows main page  -->
+    <!-- My Computer -->
     <div id="myModal" class="modal">
       <div class="modal__content">
         <nav class="modal__content__button"><button id="cross">X</button></nav>
@@ -52,21 +52,29 @@
       </div>
     </div>
 
-    <!-- <div class="modal__open">
-        <p
-          class="modal__open__img2"
-          style="background-image: url('./images/notePadModal.jpg')"
-        ></p>
+    <!-- notepad -->
+    <div id="notepadModal" class="modal">
+      <div class="modal__content">
+        <nav class="modal__content__button">
+          <button id="cross1">X</button>
+        </nav>
+        <textarea id="textArea" rows="25" cols="110"> </textarea>
       </div>
+    </div>
 
-      <div class="modal__open">
-        <p
-          class="modal__open__img3"
-          style="background-image: url('./images/folderModal.jpg')"
-        ></p>
+    <!-- Folder -->
+    <div id="folderModal" class="modal">
+      <div class="modal__content">
+        <nav class="modal__content__button">
+          <button id="cross2">X</button>
+        </nav>
+        <div class="modal__content__folder">
+          <img src="./icons/folder.png" alt="Folder Open" />
+          <img src="./icons/folder.png" alt="Folder Open" />
+          <img src="./icons/folder.png" alt="Folder Open" />
+        </div>
       </div>
-
-      <button class="modal__open__cross" src=""></button> -->
+    </div>
 
     <!-- Option of taskbar start  button -->
     <div class="clickStart" id="clickStart">
@@ -88,6 +96,7 @@
           >
         </div>
       </div>
+
       <!-- Icons and Name in Start -->
 
       <div class="clickStart__starticon">
@@ -148,7 +157,10 @@
           id="start"
         />
       </div>
-      <div class="taskbar__time" id="time"></div>
+      <div class="taskbar__time">
+        <div id="time"></div>
+        <div id="date"></div>
+      </div>
     </nav>
   </body>
 </html>
