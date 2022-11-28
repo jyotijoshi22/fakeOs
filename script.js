@@ -49,9 +49,13 @@ const startModalnotepad = document.getElementById("notepadModal");
 startModalnotepad.style.display = "none";
 
 const myNotepad = document.getElementById("notepad");
-myNotepad.onclick = function () {
+// myNotepad.onclick = function () {
+//   startModalnotepad.style.display = "flex";
+// };
+
+myNotepad.addEventListener("click", () => {
   startModalnotepad.style.display = "flex";
-};
+});
 
 //Modal of Folders
 

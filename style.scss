@@ -53,10 +53,7 @@ body {
 
 .clickStart {
   font-family: verdana;
-  position: absolute;
-  bottom: 25px;
-  left: -5px;
-  width: 300px;
+  @include mixins.position-content(absolute, -5px, 25px, 300px, 50px);
   background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
   padding: 8px 0px 7px 8px;
   border-top-left-radius: 10px;

@@ -24,6 +24,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-content: flex-end;
+  margin: 20px;
   bottom: 5px;
   left: 500px;
   font-size: 12px;
@@ -55,9 +56,10 @@ body {
 .clickStart {
   font-family: verdana;
   position: absolute;
-  bottom: 25px;
   left: -5px;
+  bottom: 25px;
   width: 300px;
+  height: 50px;
   background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
   padding: 8px 0px 7px 8px;
   border-top-left-radius: 10px;
