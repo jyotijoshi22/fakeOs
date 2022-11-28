@@ -1,19 +1,18 @@
-//Show current time
-const jyotiOsTime = document.getElementById("time");
+//Shows current time in Taskbar
+const osTime = document.getElementById("time");
 
 const updateTime = () => {
   let today = new Date();
   let hours = today.getHours();
   const minutes = String(today.getMinutes()).padStart(2, "0");
   let current_time = `Time: ${hours}:${minutes}`;
-  jyotiOsTime.innerHTML = current_time;
+  osTime.innerHTML = current_time;
   setTimeout(updateTime, 1000);
 };
-
 updateTime();
 
-// Current date
-const jyotiOsDate = document.getElementById("date");
+// Shows Current date in TaskBar
+const osDate = document.getElementById("date");
 
 const updateDate = () => {
   let todayDate = new Date();
@@ -21,11 +20,11 @@ const updateDate = () => {
   let month = todayDate.getMonth() + 1;
   let year = todayDate.getFullYear();
   let current_date = `Date:  ${day}/${month}/${year}`;
-  jyotiOsDate.innerHTML = current_date;
+  osDate.innerHTML = current_date;
 };
 updateDate();
 
-//Toggle menu
+//Toggle menu when start is clicked
 const startMenu = document.getElementById("clickStart");
 startMenu.style.display = "none";
 
