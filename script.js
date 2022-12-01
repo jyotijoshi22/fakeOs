@@ -19,7 +19,7 @@ const updateDate = () => {
   let day = todayDate.getDate();
   let month = todayDate.getMonth() + 1;
   let year = todayDate.getFullYear();
-  let current_date = `Date:  ${day}/${month}/${year}`;
+  let current_date = `  Date:  ${day}/${month}/${year}`;
   osDate.innerHTML = current_date;
 };
 updateDate();
@@ -29,55 +29,46 @@ const startMenu = document.getElementById("clickStart");
 startMenu.style.display = "none";
 
 const startImage = document.getElementById("start");
-startImage.onclick = function () {
+startImage.addEventListener("click", () => {
   if (startMenu.style.display == "none") {
     startMenu.style.display = "block";
   } else startMenu.style.display = "none";
+});
+//Toggle Menu ends here
+
+//modal function
+const displayModal = (str1, modal1) => {
+  const onModal = document.getElementById(str1);
+  onModal.addEventListener("click", () => {
+    modal1.style.display = "flex";
+  });
 };
 
 //Modal of My computer Icon
 const startModal = document.getElementById("myModal");
 startModal.style.display = "none";
-
-const mycomp = document.getElementById("mycomputer");
-mycomp.onclick = function () {
-  startModal.style.display = "flex";
-};
+displayModal("mycomputer", startModal);
 
 //Modal of Notepad
+
 const startModalnotepad = document.getElementById("notepadModal");
 startModalnotepad.style.display = "none";
-
-const myNotepad = document.getElementById("notepad");
-// myNotepad.onclick = function () {
-//   startModalnotepad.style.display = "flex";
-// };
-
-myNotepad.addEventListener("click", () => {
-  startModalnotepad.style.display = "flex";
-});
+displayModal("notepad", startModalnotepad);
 
 //Modal of Folders
 
 const startModalFolder = document.getElementById("folderModal");
 startModalFolder.style.display = "none";
+displayModal("folder", startModalFolder);
 
-const myFolder = document.getElementById("folder");
-myFolder.onclick = function () {
-  startModalFolder.style.display = "flex";
-};
+//Close the modal for 3 icons in the window
 
-//close the modal for 3 icons in the window
-const closeBtn = document.getElementById("cross");
-closeBtn.onclick = function () {
-  startModal.style.display = "none";
+const closeModal = (str, modal) => {
+  const closeBtn = document.getElementById(str);
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 };
-
-const closeBtn1 = document.getElementById("cross1");
-closeBtn1.onclick = function () {
-  startModalnotepad.style.display = "none";
-};
-const closeBtn2 = document.getElementById("cross2");
-closeBtn2.onclick = function () {
-  startModalFolder.style.display = "none";
-};
+closeModal("cross", startModal);
+closeModal("cross1", startModalnotepad);
+closeModal("cross2", startModalFolder);

@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  z-index: 0;
 }
 
 .taskbar {
@@ -24,8 +25,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-content: flex-end;
-  margin: 20px;
-  bottom: 5px;
+  bottom: 10px;
   left: 500px;
   font-size: 12px;
   color: black;
@@ -46,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.icons__figure__icons {
+.icons__figure__icon {
   align-items: center;
   margin: 5px;
   margin-left: 20px;
@@ -56,10 +56,9 @@ body {
 .clickStart {
   font-family: verdana;
   position: absolute;
+  bottom: 10px;
   left: -5px;
-  bottom: 25px;
   width: 300px;
-  height: 50px;
   background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
   padding: 8px 0px 7px 8px;
   border-top-left-radius: 10px;
@@ -85,29 +84,33 @@ body {
 }
 
 .modal {
-  position: fixed;
-  left: 0;
-  bottom: 10px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  padding-top: 100px;
+  position: absolute;
+  left: 250px;
+  bottom: 50px;
+  width: 50%;
+  height: 50%;
+  padding-top: 10px;
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__content {
   background-color: #fefefe;
+  z-index: 1;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
 }
 .modal__content__button {
   display: flex;
   justify-content: flex-end;
 }
 .modal__content__folder {
+  z-index: 1;
   display: flex;
   justify-content: space-around;
+}
+.modal__content__folder__img, .modal__content__folder__label {
+  flex-direction: column;
 }
