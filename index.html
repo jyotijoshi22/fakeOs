@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+
+    <title>Fake Operating Systems</title>
+  </head>
+  <body id="window-screen">
+    <!-- Windows main page-contains icons-->
+
+    <div class="icons" draggable="true">
+      <div class="icons__figure" id="mycomputer">
+        <img
+          class="icons__figure__icon"
+          src="./icons/myComputer.png"
+          alt="My computer"
+        />
+        <label class="icons__figure__label" for="mycomputer">My Computer</label>
+      </div>
+
+      <div class="icons__figure" id="notepad">
+        <img class="icons__figure__icon" src="./icons/notepad.png" alt="File" />
+        <label class="icons__figure__label" for="notepad">Notepad</label>
+      </div>
+
+      <div class="icons__figure" id="folder">
+        <img
+          class="icons__figure__icon"
+          src="./icons/folder.png"
+          alt="Folder Open"
+        />
+        <label class="icons__figure__label" for="folder">User Folder</label>
+      </div>
+    </div>
+
+    <!--Modals for icons in windows main page  -->
+    <!-- My Computer -->
+    <div id="myModal" class="modal">
+      <div class="modal__content">
+        <nav class="modal__content__button"><button id="cross">X</button></nav>
+        <img src="./images/myComputerModal.jpg" width="800px" height="500px" />
+      </div>
+    </div>
+
+    <!-- notepad -->
+    <div id="notepadModal" class="modal">
+      <div class="modal__content">
+        <nav class="modal__content__button">
+          <button id="cross1">X</button>
+        </nav>
+        <textarea id="textArea" rows="25" cols="110"> </textarea>
+      </div>
+    </div>
+
+    <!-- Folder -->
+    <div id="folderModal" class="modal">
+      <div class="modal__content">
+        <nav class="modal__content__button">
+          <button id="cross2">X</button>
+        </nav>
+
+        <div class="modal__content__folder">
+          <img
+            class="modal__content__folder__img"
+            src="./icons/folder.png"
+            alt="Folder Open"
+            id="folder1"
+          />
+          <label class="modal__content__folder__label" for="folder1"
+            >User Folder</label
+          >
+
+          <img
+            class="modal__content__folder__img"
+            src="./icons/folder.png"
+            alt="Folder Open"
+            id="folder2"
+          />
+          <label class="modal__content__folder__label" for="folder2"
+            >User Folder</label
+          >
+
+          <img
+            class="modal__content__folder__img"
+            src="./icons/folder.png"
+            alt="Folder Open"
+            id="folder3"
+          />
+
+          <label class="modal__content__folder__label" for="folder3"
+            >User Folder</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Option of taskbar start  button -->
+    <div class="clickStart" id="clickStart">
+      <!-- User Info  -->
+      <div class="clickStart__head">
+        <div class="clickStart__head clickStart__head__img">
+          <img
+            class="clickStart__head clickStart__head__img"
+            src="./images/Jyoti.jpg"
+            width="50px"
+            height="50px"
+            alt="jyoti"
+          />
+        </div>
+
+        <div class="clickStart__head clickStart__head__userName">
+          <label class="clickStart__head__userName__label" for="username"
+            >Jyoti Joshi</label
+          >
+        </div>
+      </div>
+
+      <!-- Icons and Name in Start -->
+
+      <div class="clickStart__starticon">
+        <div class="clickStart__starticon__menu" id="explorer">
+          <img
+            class="clickStart__starticon__menu__img"
+            src="./icons/explorer.png"
+            alt="explorer icon"
+            width="50px"
+            height="50px"
+          />
+          <h3>Explorer</h3>
+        </div>
+
+        <div class="clickStart__starticon__menu" id="paint">
+          <img
+            class="clickStart__starticon__menu__img"
+            src="./icons/paint.png"
+            alt="Paint Icon"
+            width="50px"
+            height="50px"
+          />
+          <h3>Paint</h3>
+        </div>
+
+        <div class="clickStart__starticon__menu" id="calculator">
+          <img
+            class="clickStart__starticon__menu__img"
+            src="./icons/calculator.png"
+            alt="calculator icon"
+            width="50px"
+            height="50px"
+          />
+          <h3>Calculator</h3>
+        </div>
+
+        <div class="clickStart__starticon__menu" id="visual">
+          <img
+            class="clickStart__starticon__menu__img"
+            src="./icons/visual.png"
+            alt="visual icon"
+            width="50px"
+            height="50px"
+          />
+          <h3>Visual Studio</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taskbar of OS -->
+    <nav class="taskbar" id="taskbar">
+      <div class="taskbar__start toggle">
+        <img
+          class="taskbar__start__img"
+          src="./images/start.jpg"
+          height="35px"
+          alt="Start"
+          id="start"
+        />
+      </div>
+      <div class="taskbar__time">
+        <div id="time"></div>
+        <br />
+        <br />
+        <div id="date"></div>
+      </div>
+    </nav>
+  </body>
+</html>

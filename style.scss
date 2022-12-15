@@ -1,1 +1,117 @@
+@use "./modules/mixins.scss";
 
+body {
+  background-image: url("./images/windows.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: 0;
+}
+
+.taskbar {
+  @include mixins.position-content(fixed, 0, 0px, 100%, 35px);
+  background: linear-gradient(grey, white);
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+
+  &__start {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__time {
+    @include mixins.flex-content(flex, row, flex-end);
+    align-content: flex-end;
+    //margin: 20px;
+    bottom: 10px;
+    left: 500px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.icons {
+  width: 100%;
+  height: 96vh;
+  @include mixins.flex-content(flex, column, flex-start);
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: 15px;
+  &__figure {
+    display: flex;
+    flex-direction: column;
+
+    &__icon {
+      align-items: center;
+      margin: 5px;
+      margin-left: 20px;
+      width: 50px;
+    }
+  }
+}
+
+.clickStart {
+  font-family: verdana;
+  position: absolute;
+  bottom: 10px;
+  left: -5px;
+  width: 300px;
+  background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
+  padding: 8px 0px 7px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &__head {
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #eee;
+  }
+
+  &__starticon {
+    align-items: center;
+    justify-content: flex-start;
+
+    &__menu {
+      @include mixins.flex-content(flex, row, flex-start);
+      align-items: center;
+      gap: 100px;
+    }
+  }
+}
+
+.modal {
+  @include mixins.position-content(absolute, 250px, 50px, 50%, 50%);
+  //z-index: 1;
+  padding-top: 10px;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &__content {
+    background-color: #fefefe;
+    z-index: 1;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%;
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__folder {
+      z-index: 1;
+      display: flex;
+      justify-content: space-around;
+      &__img,
+      &__label {
+        flex-direction: column;
+      }
+    }
+  }
+}

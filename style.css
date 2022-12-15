@@ -1,0 +1,116 @@
+body {
+  background-image: url("./images/windows.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: 0;
+}
+
+.taskbar {
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(grey, white);
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+.taskbar__start:hover {
+  cursor: pointer;
+}
+.taskbar__time {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  bottom: 10px;
+  left: 500px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+.icons {
+  width: 100%;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.icons__figure {
+  display: flex;
+  flex-direction: column;
+}
+.icons__figure__icon {
+  align-items: center;
+  margin: 5px;
+  margin-left: 20px;
+  width: 50px;
+}
+
+.clickStart {
+  font-family: verdana;
+  position: absolute;
+  bottom: 10px;
+  left: -5px;
+  width: 300px;
+  background: linear-gradient(to bottom, blue 0%, skyBlue 100%);
+  padding: 8px 0px 7px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.clickStart__head {
+  display: flex;
+  gap: 100px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #eee;
+}
+.clickStart__starticon {
+  align-items: center;
+  justify-content: flex-start;
+}
+.clickStart__starticon__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.modal {
+  position: absolute;
+  left: 250px;
+  bottom: 50px;
+  width: 50%;
+  height: 50%;
+  padding-top: 10px;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__content {
+  background-color: #fefefe;
+  z-index: 1;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 100%;
+}
+.modal__content__button {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal__content__folder {
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+.modal__content__folder__img, .modal__content__folder__label {
+  flex-direction: column;
+}
